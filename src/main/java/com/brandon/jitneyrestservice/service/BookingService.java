@@ -12,6 +12,10 @@ public class BookingService implements IBookingService {
 	
 	@Autowired
 	private BookingRepository bookingRepository;
+	
+	public void setBookingRepository(BookingRepository bookingRepository) {
+		this.bookingRepository = bookingRepository;
+	}
 
 	@Override
 	public List<Booking> findAll() {

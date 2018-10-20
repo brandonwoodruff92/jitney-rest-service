@@ -18,6 +18,10 @@ public class BookingController {
 	@Autowired
 	private IBookingService bookingService;
 	
+	public void setBookingService(IBookingService bookingService) {
+		this.bookingService = bookingService;
+	}
+	
 	@RequestMapping(value = RestRoutes.BOOKINGS, method = RequestMethod.GET)
 	public List<Booking> getBookings() {
 		List<Booking> bookings = bookingService.findAll();
